@@ -2,7 +2,8 @@ echo ==============================
 echo update ubuntu package 
 echo ============================== 
 apt-get update && \
-apt-get install software-properties-common -y
+apt-get install software-properties-common -y && \
+apt-get install wget -y
 
 echo ==============================
 echo install jdk
@@ -14,7 +15,7 @@ apt-get install -y oracle-java8-installer
 echo ==============================
 echo install maven
 echo ==============================
-cd /opt/ wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
+cd /opt/ && wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
 tar -xvzf apache-maven-3.3.9-bin.tar.gz && \
 mv apache-maven-3.3.9 maven
 

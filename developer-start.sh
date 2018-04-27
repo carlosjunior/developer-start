@@ -7,7 +7,7 @@ echo ==============================
 echo install jdk
 echo ==============================
 add-apt-repository ppa:webupd8team/java && \
-apt-get install oracle-java8-installer && \
+apt-get install -y oracle-java8-installer && \
 java -version
 
 echo ==============================
@@ -29,7 +29,7 @@ mvn --version
 echo ==============================
 echo install git
 echo ==============================
-apt-get install git && \
+apt-get install -y git && \
 git --version
 
 echo ==============================
@@ -52,12 +52,12 @@ ssh-keygen -t rsa -C $gitEmail
 echo ==============================
 echo install docker
 echo ==============================
-apt-get install apt-transport-https ca-certificates curl software-properties-common && \
+apt-get install -y apt-transport-https ca-certificates curl software-properties-common && \
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
 apt-key fingerprint 0EBFCD88 && \
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable" && \
 apt-get update && \
-apt-get install docker-ce && \
+apt-get install -y docker-ce && \
 docker --version
 
 echo ==============================
@@ -70,12 +70,12 @@ docker-compose --version
 echo ==============================
 echo install node
 echo ==============================
-apt-get install nodejs
+apt-get install -y nodejs
 
 echo ==============================
 echo install npm
 echo ==============================
-apt-get install npm
+apt-get install -y npm
 
 echo ==============================
 echo Done, restart your machine!

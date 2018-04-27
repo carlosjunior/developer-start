@@ -7,8 +7,8 @@ echo ==============================
 echo install jdk
 echo ==============================
 add-apt-repository ppa:webupd8team/java && \
-apt-get install -y oracle-java8-installer && \
-java -version
+echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections && \
+apt-get install -y oracle-java8-installer
 
 echo ==============================
 echo install maven
@@ -22,15 +22,13 @@ echo Adicionado variável de ambiente
 echo ================================
 echo "export M2_HOME=/opt/maven" > /etc/profile.d/mavenenv.sh && \
 echo "export PATH=${M2_HOME}/bin:${PATH}" >> /etc/profile.d/mavenenv.sh && \
-chmod +x /etc/profile.d/mavenenv.sh && \
-source /etc/profile.d/mavenenv.sh && \
-mvn --version
+chmod +x /etc/profile.d/mavenenv.sh
+
 
 echo ==============================
 echo install git
 echo ==============================
-apt-get install -y git && \
-git --version
+apt-get install -y git
 
 echo ==============================
 echo config git
@@ -57,15 +55,13 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
 apt-key fingerprint 0EBFCD88 && \
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable" && \
 apt-get update && \
-apt-get install -y docker-ce && \
-docker --version
+apt-get install -y docker-ce
 
 echo ==============================
 echo install docker-compose
 echo ==============================
 curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose && \
-chmod +x /usr/local/bin/docker-compose && \
-docker-compose --version
+chmod +x /usr/local/bin/docker-compose
 
 echo ==============================
 echo install node

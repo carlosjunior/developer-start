@@ -1,7 +1,7 @@
 echo ==============================
 echo update ubuntu package 
 echo ============================== 
-apt-get update
+apt-get update && \
 
 echo ==============================
 echo install jdk

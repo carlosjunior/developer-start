@@ -2,12 +2,13 @@ echo ==============================
 echo update ubuntu package 
 echo ============================== 
 apt-get update && \
+apt-get install software-properties-common -y
 
 echo ==============================
 echo install jdk
 echo ==============================
 add-apt-repository ppa:webupd8team/java && \
-echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections && \
+echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections && \
 apt-get install -y oracle-java8-installer
 
 echo ==============================

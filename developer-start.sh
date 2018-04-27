@@ -70,3 +70,4 @@ sudo apt-get install npm && \
 echo ==============================
 echo Done, restart your machine!
 echo ==============================
+sudo reboot

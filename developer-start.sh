@@ -26,7 +26,6 @@ echo "export M2_HOME=/opt/maven" > /etc/profile.d/mavenenv.sh && \
 echo "export PATH=${M2_HOME}/bin:${PATH}" >> /etc/profile.d/mavenenv.sh && \
 chmod +x /etc/profile.d/mavenenv.sh
 
-
 echo ==============================
 echo install git
 echo ==============================

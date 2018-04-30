@@ -85,3 +85,8 @@ apt-get install -y npm
 echo ==============================
 echo Done, restart your machine!
 echo ==============================
+
+echo
+echo ==============================
+echo https://www.omgubuntu.co.uk/2018/04/things-to-do-after-installing-ubuntu-18-04
+echo ==============================

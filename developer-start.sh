@@ -22,8 +22,9 @@ mv apache-maven-3.3.9 maven
 echo ================================
 echo Adicionado variável de ambiente
 echo ================================
+export M2_HOME=/opt/maven
 echo "export M2_HOME=/opt/maven" > /etc/profile.d/mavenenv.sh && \
-echo "export PATH=${M2_HOME}/bin:${PATH}" >> /etc/profile.d/mavenenv.sh && \
+echo "export PATH="\$M2_HOME"/bin:\$PATH" >> /etc/profile.d/mavenenv.sh && \
 chmod +x /etc/profile.d/mavenenv.sh
 
 echo ==============================
